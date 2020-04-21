@@ -1,18 +1,12 @@
-<html lang="pl">
-<body>
-
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-// collect value of input field
-$name = "Krystyna";
-$name = $_REQUEST['fname'];
-if ($name == "Krystyna")
+$acceptName = 'Krystyna';
+$name = $_REQUEST['name'];
+($_SERVER["REQUEST_METHOD"] == "POST");
+if ($name == 'Krystyna')
 {
-    echo "Welcome Krystyna";
+    echo 'Welcome Krystyna';
 } else
 {
-    echo "Żegnam " . $_POST["fname"] . " Nie lubię cię! :C";
+    echo "Żegnam " . $_POST["name"] . " Nie lubię cię! :C";
 }
 ?>
-</body>
-</html>
