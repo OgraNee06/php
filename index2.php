@@ -6,29 +6,48 @@ $prod3 = 'Logitech';
 $prod4 = 'Muszynianka';
 $prod5 = 'Crostini';
 
-echo $name;
 switch ($name)
     {
     case $prod1:
-        echo ' produkuje telefony i telewizory.';
+        echo 'Produkuje telefony' , "<br>" ;
         break;
     case $prod2:
-        echo ' produkuje drukarki';
+        echo 'Produkuje drukarki.', "<br>";
         break;
     case $prod3:
-        echo ' produkuje głośniki, myszki oraz klawiatury';
+        echo 'Produkuje głośniki,', "<br>";
         break;
+
     case $prod4:
-        echo ' produkuje telefony i głośniki';
+        echo 'Produkuje telefony,', "<br>";
         break;
     case $prod5:
-        echo ' produkuje telewizory i myszki';
+        echo 'Produkuje telewizory,', "<br>";
         break;
-    default:
-        echo ' nie produkuje nic';
-
-    }
-
-
+        default:
+            echo 'Nie produkuje nic';
+            break;
+}
+switch ($name)
+{
+    case $prod1:
+        echo'Produkuje telewizory';
+        break;
+    case $prod3:
+        echo 'Produkuje myszki,', "<br>";
+        break;
+    case $prod4:
+        echo 'Produkuje głośniki';
+        break;
+    case $prod5:
+        echo 'Produkuje myszki';
+        break;
+}
+switch ($name)
+{
+    case $prod3:
+        echo 'Produkuje klawiatury';
+        break;
+}
 
 
