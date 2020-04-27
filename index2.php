@@ -9,17 +9,14 @@ $prod5 = 'Crostini';
 switch ($name)
     {
     case $prod1:
+    case $prod4:
         echo 'Produkuje telefony' , "<br>" ;
         break;
     case $prod2:
-        echo 'Produkuje drukarki.', "<br>";
+        echo 'Produkuje drukarki.';
         break;
     case $prod3:
         echo 'Produkuje głośniki,', "<br>";
-        break;
-
-    case $prod4:
-        echo 'Produkuje telefony,', "<br>";
         break;
     case $prod5:
         echo 'Produkuje telewizory,', "<br>";
@@ -33,14 +30,12 @@ switch ($name)
     case $prod1:
         echo'Produkuje telewizory';
         break;
-    case $prod3:
-        echo 'Produkuje myszki,', "<br>";
-        break;
     case $prod4:
         echo 'Produkuje głośniki';
         break;
     case $prod5:
-        echo 'Produkuje myszki';
+    case $prod3:
+        echo 'Produkuje myszki', '<br>';
         break;
 }
 switch ($name)
