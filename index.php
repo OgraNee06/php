@@ -1,2 +1,2 @@
 <?php
-include 'core/base/index.html';
+include 'base/base/index.html';
