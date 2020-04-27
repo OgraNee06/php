@@ -1,48 +1,99 @@
 <?php
 $name = $_REQUEST['name'];
-$prod1 = 'Samsung';
-$prod2 = 'Canon';
-$prod3 = 'Logitech';
-$prod4 = 'Muszynianka';
-$prod5 = 'Crostini';
+$samsung = 'Samsung';
+$canon = 'Canon';
+$logitech = 'Logitech';
+$muszynianka = 'Muszynianka';
+$crostini = 'Crostini';
+$maxCounters = [
+    $samsung => 2,
+    $canon => 1,
+    $logitech => 3,
+    $muszynianka => 2,
+    $crostini => 2
+];
 
-switch ($name)
-    {
-    case $prod1:
-    case $prod4:
-        echo 'Produkuje telefony' , "<br>" ;
-        break;
-    case $prod2:
-        echo 'Produkuje drukarki.';
-        break;
-    case $prod3:
-        echo 'Produkuje głośniki,', "<br>";
-        break;
-    case $prod5:
-        echo 'Produkuje telewizory,', "<br>";
-        break;
-        default:
-            echo 'Nie produkuje nic';
+if(isset($maxCounters[$name])) //isset sprawdza czy w tablicy istnieje wartosc pod podanym kluczem
+{
+    $maxCounter = $maxCounters[$name];
+} else {
+    $maxCounter = 0;
+}
+
+$counter = 0;
+
+// komentarz
+/*
+ * komentarz
+ */
+// $counter++;
+// $counter += 1;
+
+switch ($name) {
+
+    case $canon:
+        if ($counter < $maxCounter) {
+            echo 'Produkuje drukarki';
+            $counter++;
+        }
+        if ($counter == $maxCounter) {
             break;
-}
-switch ($name)
-{
-    case $prod1:
-        echo'Produkuje telewizory';
-        break;
-    case $prod4:
-        echo 'Produkuje głośniki';
-        break;
-    case $prod5:
-    case $prod3:
-        echo 'Produkuje myszki', '<br>';
-        break;
-}
-switch ($name)
-{
-    case $prod3:
-        echo 'Produkuje klawiatury';
-        break;
-}
+        }
 
+    case $muszynianka:
+        if ($counter < $maxCounter) {
+            echo 'Produkuje telefony';
+            $counter++;
+        }
+        if ($counter == $maxCounter) {
+            break;
+        }
 
+    case $logitech:
+
+        if ($counter < $maxCounter) {
+            echo 'Produkuje klawiatury';
+            $counter++;
+        }
+        if ($counter == $maxCounter) {
+            break;
+        }
+    case $samsung:
+        if ($counter < $maxCounter) {
+            echo 'Produkuje telefony ';
+            $counter++;
+        }
+        if ($counter == $maxCounter) {
+            break;
+        }
+    case $crostini:
+    case $samsung:
+        if ($counter < $maxCounter) {
+            echo 'Produkuje telewizory';
+            $counter++;
+        }
+        if ($counter == $maxCounter) {
+            break;
+        }
+    case $logitech:
+    case $muszynianka:
+
+        if ($counter < $maxCounter) {
+            echo 'Produkuje głośniki';
+            $counter++;
+        }
+        if ($counter == $maxCounter) {
+            break;
+        }
+    case $logitech:
+    case $crostini:
+        if ($counter < $maxCounter) {
+            echo 'Produkuje myszki';
+            $counter++;
+        }
+        if ($counter == $maxCounter) {
+            break;
+        }
+    default:
+        echo 'Nie produkuje nic';
+}
